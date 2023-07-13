@@ -7,7 +7,6 @@ const getNumberCard = () => {
     const trueResponse = "Tarjeta Válida"
     const falseResponse = "tarjeta No Válida";
 
-    //console.log(numberCard);
 
     const checkValidate = document.getElementById("response");
     checkValidate.innerHTML = result ? trueResponse : falseResponse;
