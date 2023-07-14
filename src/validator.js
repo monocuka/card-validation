@@ -4,6 +4,7 @@ const validator = {
 
         const cardArray = number.split("").reverse().join("");
 
+
         let arrFilter = [];
         let arrFilterImpar = [];
 
@@ -37,7 +38,32 @@ const validator = {
             sums += arrNumbers[i];
         }        
           return sums % 10 === 0 ;
+      },
+
+      maskify(number){
+
+        const numberCard = number;
+
+        if (numberCard.length <= 5) {
+          return numberCard;
+        }
+
+        for (let i = 0; i < numberCard.length; i++) {
+          
+          if (numberCard.length < 17 ) {
+            //const finalForNumbers = numberCard.substr(-4);
+            const firstNumbers = numberCard.substr(0,12);
+            return numberCard.replace(firstNumbers, "##########")
+          }else{
+            return "ingrese solo 16 digitos sin espacios"
+          }
+          
+        }
+
+
       }
+      
+          
     }
 
 
