@@ -44,26 +44,16 @@ const validator = {
 
         const numberCard = number;
 
-        if (numberCard.length <= 5) {
+        if (numberCard.length < 5) {
           return numberCard;
         }
+        const arrNumber = numberCard.split("");
 
-        for (let i = 0; i < numberCard.length; i++) {
-          
-          if (numberCard.length < 17 ) {
-            //const finalForNumbers = numberCard.substr(-4);
-            const firstNumbers = numberCard.substr(0,12);
-            return numberCard.replace(firstNumbers, "##########")
-          }else{
-            return "ingrese solo 16 digitos sin espacios"
-          }
-          
+        for (let i = 0; i < arrNumber.length -4; i++) {
+          arrNumber[i] = "#";
         }
-
-
+        return arrNumber.join("");
       }
-      
-          
     }
 
 
