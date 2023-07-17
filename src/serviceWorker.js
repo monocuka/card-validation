@@ -6,7 +6,11 @@ const cardValidation = 'card-validation-v1';
 const assets = [
     './',
     './index.html',
-    './img/favicon.ico'
+    './img/favicon.ico',
+    './img/logo.png',
+    './index.js',
+    './style.css',
+    './validator.js'
 ]
 
 // eslint-disable-next-line arrow-parens
