@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <meta name="description" content="Web para validar numeros de tarjeta de crédito.">
+    <meta name="theme-color" content="#7A89D7"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Tarjeta de crédito válida</title>
+    <link rel="apple-touch-icon" href="img/ios/192.png">
+    <link rel='manifest' href='manifest.json'>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,5 +34,15 @@
     </div>
     </footer>
     <script src="index.js" type="module"></script>
+    <script defer type="text/javascript">
+      if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function() {
+              navigator.serviceWorker
+              .register("/serviceWorker.js")
+              .then(res => console.log("service worker registered"))
+              .catch(err => console.log("service worker not registered", err))
+          })
+      }
+  </script>
   </body>
 </html>
